@@ -14,26 +14,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>Time App</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://img.icons8.com/ultraviolet/40/null/globe.png"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Time app</h1>
-      <select name="select-city" id="select-city">
-        <option value="">Select a city</option>
-        <option value="bangkok">Bangkok</option>
-        <option value="sydney">Sydney</option>
-        <option value="paris">Paris</option>
-      </select>
-      <div class="city">
-        <h2>Bangkok</h2>
-        <div class="date">Sunday 12 Feb</div>
-        <div class="time">12:58:01 PM</div>
-        <h2>Sydney</h2>
-        <div class="date">Sunday 12 Feb</div>
-        <div class="time">12:58:01 PM</div>
-        <h2>Paris</h2>
-        <div class="date">Sunday 12 Feb</div>
-        <div class="time">12:58:01 PM</div>
+      <h1>Time app 🕒</h1>
+      <div class="row align-items-start city-image">
+        <div class="col">
+          <div class="container-sm">
+            <div class="city-list">
+              <select
+                name="select-city"
+                id="select-city"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option selected value="">Select a city</option>
+                <option value="bangkok">Bangkok</option>
+                <option value="sydney">Sydney</option>
+                <option value="paris">Paris</option>
+              </select>
+            </div>
+            <div class="city-displayed">
+              <h2>Bangkok</h2>
+              <div class="date">Sunday 12 Feb</div>
+              <div class="time">12:58:01 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="col city-examples">
+          <div class="container-sm">
+            <ul>
+              <li>
+                <h2>Sydney</h2>
+                <div class="date">Sunday 12 Feb</div>
+                <div class="time">12:58:01 PM</div>
+              </li>
+              <li>
+                <h2>London</h2>
+                <div class="date">Sunday 12 Feb</div>
+                <div class="time">12:58:01 PM</div>
+              </li>
+              <li>
+                <h2>Paris</h2>
+                <div class="date">Sunday 12 Feb</div>
+                <div class="time">12:58:01 PM</div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <footer>

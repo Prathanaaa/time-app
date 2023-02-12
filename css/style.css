@@ -1,7 +1,39 @@
 h1 {
+  padding: 20px;
   text-align: center;
+}
+li {
+  margin: 30px auto;
+  list-style-type: none;
 }
 
 footer {
   text-align: center;
+  font-size: 14px;
+}
+
+.city-image {
+  background-image: url("../medias/world.jpg");
+  background-size: 800px 600px;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.city-displayed {
+  padding-left: 20px;
+  color: #dddbdb;
+}
+
+.city-examples {
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 0px 8px 8px 0px;
+  border-color: lightgrey;
+}
+
+.city-list {
+  margin-top: 20px;
+}
+
+.city-displayed {
+  margin-top: 30px;
 }
