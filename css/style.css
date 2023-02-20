@@ -2,9 +2,9 @@ h1 {
   padding: 20px;
   text-align: center;
 }
-li {
-  margin: 30px auto;
-  list-style-type: none;
+
+small {
+  font-weight: 400;
 }
 
 footer {
@@ -12,6 +12,12 @@ footer {
   font-size: 14px;
 }
 
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  padding: 10px;
+}
 .city-image {
   background-image: url("../medias/world.jpg");
   background-size: 800px 600px;
@@ -34,6 +40,22 @@ footer {
   margin-top: 20px;
 }
 
+.date {
+  font-size: 18px;
+}
+
+.time {
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.time-examples {
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-left: 10px;
+}
 .city-displayed {
   margin-top: 30px;
 }
