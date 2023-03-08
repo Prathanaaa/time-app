@@ -1,14 +1,4 @@
 function updateTime() {
-  let bangkokElement = document.querySelector("#bangkok");
-  let bangkokDateElement = bangkokElement.querySelector(".date");
-  let bangkokTimeElement = bangkokElement.querySelector(".time");
-  let bangkokTime = moment().tz("Asia/Bangkok");
-
-  bangkokDateElement.innerHTML = bangkokTime.format("dddd Do MMMM");
-  bangkokTimeElement.innerHTML = bangkokTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
-
   let sydneyElement = document.querySelector("#sydney");
   let sydneyDateElement = sydneyElement.querySelector(".date");
   let sydneyTimeElement = sydneyElement.querySelector(".time");
@@ -37,22 +27,26 @@ function updateTime() {
   parisDateElement.innerHTML = parisTime.format("dddd Do MMMM");
   parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 }
-updateTime();
-setInterval(updateTime, 1000);
 
 function updateCities(event) {
   let cityTimezone = event.target.value;
-  let cityName = cityTimezone.split("/");
+  if (cityTimezone === "current") {
+    cityTimezone = moment.tz.guess();
+  }
   let cityTime = moment().tz(cityTimezone);
-  let cityElement = document.querySelector("#bangkok");
-  cityElement.innerHTML = `<div class="city-displayed" id="bangkok">
-              <h2>${cityName[1]}</h2>
+  let cityName = cityTimezone.replace("_", " ").split("/");
+  let cityElement = document.querySelector("#city-displayed");
+  cityElement.innerHTML = `<div class="city-displayed" id="city-displayed">
+              <h2>${cityName[1].toUpperCase()}</h2>
               <div class="date">${cityTime.format("dddd Do MMMM")}</div>
-              <div class="time"${cityTime.format(
+              <div class="time">${cityTime.format(
                 "h:mm:ss"
               )}<small>${cityTime.format("A")}</small></div>
             </div>`;
 }
+
+updateTime();
+setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#select-city");
 
